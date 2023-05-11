@@ -37,8 +37,27 @@
 # msg = "my name is {name}, my age is {age}".format(age=18, name='juake')
 # print(msg)
 
+# format填充与格式胡
+
+# print('{x:-<15}'.format(x='开始执行'))
+# print('{x:*>15}'.format(x='开始执行'))
+# print('{x:*^15}'.format(x='开始执行'))
+
+# 四舍五入
+# print('{salary:.3f}'.format(salary=651651.851578321))  #精确到小数点后三位
+
+
+
 # 2.3 f  python3.5以后才推出
-x=input('your name:')
-y=input('your age:')
-msg=f'我的名字是{x},我的年龄是{y}.'
-print(msg)
+
+# x=input('your name:')
+# y=input('your age:')
+# msg=f'我的名字是{x},我的年龄是{y}.'
+# print(msg)
+
+# 了解f的新用法：{}内的字符串可以被当做表达式运行
+
+res=f'{10+3}'
+print(res)
+
+f'{print("aaaaaa")}'
