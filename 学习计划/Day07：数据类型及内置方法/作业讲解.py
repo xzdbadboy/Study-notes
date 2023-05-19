@@ -135,7 +135,3 @@ while tag:
             elif input_order == 'N' or input_order == 'n':
                 tag = False
                 break
-
-            # else:
-            # print('还要继续玩吗？是请输入Y or y，退出请输入N or n')
-            # input_order = input('请输入：')
