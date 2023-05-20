@@ -155,7 +155,6 @@ while tag:
                 if input_order in ['y', 'Y']:
                     count = 1
                     tag1 = False
-                    continue
                 elif input_order == 'N' or input_order == 'n':
                     tag = False
                     print('Game over.')
