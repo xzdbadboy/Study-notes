@@ -1,12 +1,22 @@
 # 作业（必做题）
 # 1、使用while循环输出1 2 3 4 5 6     8 9 10
 
+"""
+count = 1
+while count < 11:
+    if count == 7:
+        count += 1
+        continue
+    # print(count) # end = '\n'
+    print(count, end=' ') # end = '\n' ----->  end = ' '
+    count += 1
+"""
+
 # count = 1
 # while count < 11:
-#     if count == 7:
-#         count += 1
-#         continue
-#     print(count)
+#     if count != 7:
+#         # print(count) # end = '\n'
+#         print(count, end=' ') # end = '\n' ----->  end = ' '
 #     count += 1
 
 # 2、求1-100的所有数的和
@@ -17,6 +27,13 @@
 #     sum_count = sum_count + count
 #     count += 1
 # print('1-100的所有的数和等于：{x}'.format(x=sum_count))
+
+# number = 1
+# result = 0
+# while number < 101:
+#     result += number
+#     number += 1
+# print(result)
 
 # 3、输入1-100内的所有奇数
 # 4、输入1-100内的所有偶数
@@ -67,14 +84,20 @@
 
 # import random
 # random_int = random.randint(1,1000)
-# count = 0
-# while count < 3:
-#     count +=1
+# count = 1
+# while count < 4:
 #     print('第{x}次尝试'.format(x=count))
-#     input_num = int(input('请输入您猜的数字：'))
-#     if input_num == random_int:
-#         print(f'恭喜您，猜对了，数字就是{random_int}')
-#         break
+#     input_num = input('请输入您猜的数字：')
+#     if input_num.isdigit():
+#         input_num = int(input_num)
+#         if input_num == random_int:
+#             print(f'恭喜您，猜对了，数字就是{random_int}')
+#             break
+#         else:
+#             print('猜错了，重来！')
+#             count += 1
+#     else:
+#         print('输入错误，重新来')
 # else:
 #     print(random_int)
 
@@ -107,31 +130,35 @@
 # v1.2
 import random
 
-# random_int = random.randint(1, 1000)
-random_int = 24
+random_int = random.randint(1, 1000)
+# random_int = 24
 tag = True
-
-count = 0
+count = 1
 while tag:
     tag1 = True
-    count += 1
-    print('第{x}次尝试'.format(x=count))
-    input_num = int(input('请输入您猜的数字：'))
-    if input_num == random_int:
-        print(f'恭喜您，猜对了，数字就是{random_int}')
-        break
-    elif input_num > random_int and count < 3:
-        print('大了，小点儿的')
-    elif input_num < random_int and count < 3:
-        print('小了，大点儿的')
-    elif count >= 3:
-        while tag1:
-            print('还要继续玩吗？是请输入Y or y，退出请输入N or n')
-            input_order = input('请输入：')
-            if input_order == 'Y' or input_order == 'y':
-                count = 0
-                tag1 = False
-                continue
-            elif input_order == 'N' or input_order == 'n':
-                tag = False
-                break
+    input_num = input('请输入您猜的数字：')
+    if input_num.isdigit():
+        print('第{x}次尝试'.format(x=count))
+        count += 1
+        input_num = int(input_num)
+        if input_num == random_int:
+            print(f'恭喜您，猜对了，数字就是{random_int}')
+            break
+        elif input_num > random_int and count < 4:
+            print('大了，小点儿的')
+        elif input_num < random_int and count < 4:
+            print('小了，大点儿的')
+        elif count >= 4:
+            while tag1:
+                print('还要继续玩吗？是请输入Y or y，退出请输入N or n')
+                input_order = input('请输入：')
+                if input_order in ['y', 'Y']:
+                    count = 1
+                    tag1 = False
+                    continue
+                elif input_order == 'N' or input_order == 'n':
+                    tag = False
+                    print('Game over.')
+                    break
+    else:
+        print('输入有误，重新输入')

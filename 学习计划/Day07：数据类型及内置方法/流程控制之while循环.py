@@ -124,8 +124,8 @@ while tag:
 #     count1 += 1
 
 # 7、while+else
-while True:
-    ..
-else:
-    print('else包含的代码会在while循环结束后，并且while循环在没有被break打断的情况才会运行')
+# while True:
+#     ..
+# else:
+#     print('else包含的代码会在while循环结束后，并且while循环在没有被break打断的情况才会运行')
 
