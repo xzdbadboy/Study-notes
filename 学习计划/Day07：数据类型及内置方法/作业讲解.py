@@ -157,7 +157,8 @@ while tag:
                     tag1 = False
                 elif input_order == 'N' or input_order == 'n':
                     tag = False
-                    print('Game over.')
                     break
     else:
         print('输入有误，重新输入')
+else:
+    print('Game over.')
