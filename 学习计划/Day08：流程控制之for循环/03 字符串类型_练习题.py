@@ -23,4 +23,6 @@ print(name[-2:])
 # 11)    请输出 name 变量对应的值中 “e” 所在索引位置?
 print(name.find('e'))
 # 12)    获取子序列,去掉最后一个字符。如: oldboy 则获取 oldbo。
-print(name[:-1])
+name1=name[:-1]
+print(name1)
+print(name1[::-1])
