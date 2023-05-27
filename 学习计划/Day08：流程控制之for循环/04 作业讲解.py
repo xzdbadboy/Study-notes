@@ -32,9 +32,9 @@ for x in range(1, 10):
 # 方案一
 
 numbers_of_layers = 5
-for i in range(1, 2 * numbers_of_layers,2):
+for i in range(1, 2 * numbers_of_layers, 2):
     k = '*' * i
-    print(k.center(2 * numbers_of_layers-1, ' '))
+    print(k.center(2 * numbers_of_layers - 1, ' '))
 
 # 方案二
 
