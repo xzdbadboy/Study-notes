@@ -1,8 +1,0 @@
-tank
-tank1
-tank2
-tank3
-tank4
-tank5
-tank6
-tank7

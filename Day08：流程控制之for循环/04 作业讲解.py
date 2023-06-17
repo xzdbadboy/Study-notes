@@ -15,7 +15,7 @@ for x in range(1, 10):
 # 方案2
 for x in range(1, 10):
     for y in range(1, x + 1):
-        print("%s X %s = %s" % (y, y, y * x), end='  ')
+        print("%s X %s = %s" % (y, x, y * x), end='  ')
     print()
 
 # 1.2 for循环嵌套之打印金字塔
